@@ -43,7 +43,7 @@ module.exports = function(commitSubject, branch) {
     error(`${type} is not an allowed type.\n => TYPES: ${types.join(', ')}`, commitSubject);
     return false;
   }
-  if (types[type] !== "" && types[type] !== branch) {
+  if (types[type] !== '' && types[type] !== branch) {
     error(`${type} is not allowed to be on branch ${branch}.`, commitSubject);
     return false;
   }

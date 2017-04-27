@@ -46,7 +46,7 @@ for (const name of config['branches']) {
     branchRefs[name] = output;
   }
 }
-logger.info(`Found refs for branches:\n  ${Object.entries(branchRefs).forEach(([key, value]) => {
+logger.info(`Found refs for branches:\n  ${Object.entries(branchRefs).map(([key, value]) => {
   return `${key} => ${value}`;
 }).join('\n  ')}`);
 
@@ -55,7 +55,7 @@ const output = execSync('git log --format="%H %s" --no-merges', { encoding: 'utf
 
 if (output.length === 0) {
   logger.warn('There are zero new commits between this HEAD and master');
-  return;
+  process.exit(1);
 }
 
 const commitByLines = [];
@@ -76,12 +76,12 @@ for (const line of output.split(/n/)) {
 
 if (!branch) {
   logger.fatal('Something wrong happened.');
-  return;
+  process.exit(1);
 }
 
-logger.info(`Examining ${commitsByLine.length} commit(s) between HEAD and ${branch}`);
+logger.info(`Examining ${commitByLines.length} commit(s) between HEAD and ${branch}`);
 
-const someCommitsInvalid = !commitsByLine.every(validateCommitMessage);
+const someCommitsInvalid = !commitByLines.every(validateCommitMessage);
 
 if (someCommitsInvalid) {
   logger.error('Please fix the failing commit messages before continuing...');
