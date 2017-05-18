@@ -1,3 +1,27 @@
+<a name="1.0.4"></a>
+## [1.0.4](https://github.com/angular/angular-cli/compare/v1.0.3...v1.0.4) (2017-05-18)
+
+
+### Bug Fixes
+
+* **@angular/cli:** adds language to index.html for accessibility ([1d99472](https://github.com/angular/angular-cli/commit/1d99472))
+* **@angular/cli:** allow e2e multi capabilities ([8a7f6dd](https://github.com/angular/angular-cli/commit/8a7f6dd)), closes [#975](https://github.com/angular/angular-cli/issues/975)
+* **@angular/cli:** enable full node module resolution for project deps ([#6276](https://github.com/angular/angular-cli/issues/6276)) ([1659b74](https://github.com/angular/angular-cli/commit/1659b74))
+* **@angular/cli:** if user pass a full path, use the path ([#6341](https://github.com/angular/angular-cli/issues/6341)) ([013a3ea](https://github.com/angular/angular-cli/commit/013a3ea))
+* **@angular/cli:** prefix `historyApiFallback.index` with `deployUrl` ([#6279](https://github.com/angular/angular-cli/issues/6279)) ([26ecebf](https://github.com/angular/angular-cli/commit/26ecebf))
+* **@angular/cli:** proper generation when the target dir exists ([#5929](https://github.com/angular/angular-cli/issues/5929)) ([895b759](https://github.com/angular/angular-cli/commit/895b759))
+* **@angular/cli:** put vendor ngfactory in vendor chunk ([afa3ac5](https://github.com/angular/angular-cli/commit/afa3ac5))
+* **@angular/cli:** supress module file modification when generating guard with dry-run flag ([114ee50](https://github.com/angular/angular-cli/commit/114ee50))
+
+
+### Features
+
+* **@angular/cli:** removed Forms and Http Module from app.module.ts ([148832c](https://github.com/angular/angular-cli/commit/148832c))
+* **@angular/cli:** removed loading from index.html ([06f5216](https://github.com/angular/angular-cli/commit/06f5216))
+* **@angular/cli:** updating landing page ([fd256ce](https://github.com/angular/angular-cli/commit/fd256ce))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/angular/angular-cli/compare/v1.0.2...v1.0.3) (2017-05-09)
 
